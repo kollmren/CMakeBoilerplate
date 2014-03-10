@@ -62,9 +62,10 @@ endforeach(dir ${subDirList})
 #
 if(MSVC)
   # when using Microsoft Visual C
-  # set(CMAKE_CXX_FLAGS "-W3 -EHsc")
+  # set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -EHsc")
 elseif(UNIX)
   # for UNIX and UNIX like operating systems
+  # set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall)
 endif(MSVC)
 
 #
