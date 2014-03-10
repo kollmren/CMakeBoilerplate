@@ -60,12 +60,13 @@ endforeach(dir ${subDirList})
 #
 # global compiler and linker flags
 #
+set(CMAKE_VERBOSE_MAKEFILE true)
 if(MSVC)
   # when using Microsoft Visual C
-  # set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -EHsc")
+  #set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}" /W4)
 elseif(UNIX)
   # for UNIX and UNIX like operating systems
-  # set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall)
+  # set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DWall)
 endif(MSVC)
 
 #
