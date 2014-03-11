@@ -29,7 +29,7 @@ bpCreateModule(${nameOfModule} ${CMAKE_CURRENT_SOURCE_DIR} "" "" ${typeOfModule}
 if(MSVC)
   # when using Microsoft Visual C
   # for target
-  # e.g. set_target_properties(${nameOfModule} PROPERTIES COMPILE_FLAGS "/EHsc")
+  set_target_properties(${nameOfModule} PROPERTIES COMPILE_FLAGS "/EHsc")
   # per file
   # e.g. file(GLOB fullPathToSrcFile "${CMAKE_CURRENT_SOURCE_DIR}/src/Person.cpp")
   # set_source_files_properties(${fullPathToSrcFile} PROPERTIES COMPILE_FLAGS "/EHsc")
@@ -45,7 +45,7 @@ endif(MSVC)
 #
 # linker settings 
 #
-# e.g. SET_TARGET_PROPERTIES("${nameOfModule}" PROPERTIES LINKER_LANGUAGE C++)
+# SET_TARGET_PROPERTIES("${nameOfModule}" PROPERTIES LINKER_LANGUAGE CXX)
 
 link_directories(${CMAKE_LIBRARY_OUTPUT_DIRECTORY})
 
